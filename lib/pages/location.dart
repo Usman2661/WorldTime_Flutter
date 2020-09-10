@@ -24,7 +24,12 @@ class _LocationState extends State<Location> {
       await instance.getTime();
 
       //Navigate to the homescreen 
-      
+      Navigator.pop(context, {
+      'location': instance.location,
+      'time': instance.time,
+      'flag': instance.flag,
+      'isDayTime': instance.isDayTime,
+      });
   }
 
 
